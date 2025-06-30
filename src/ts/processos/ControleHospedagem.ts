@@ -1,6 +1,9 @@
 import Navegar from "../abstracoes/navegar";
+import Armazem from "../dominio/armazem";
+import MenuControleHospedagem from "../menus/menuControleHospedagem";
 import MenuPrincipal from "../menus/menuPricipal";
 import TipoAtualizar from "./atualizar/TipoAtualizar";
+import CadastroHospedagem from "./cadastro/CadastroHospedagem";
 import TipoCadastro from "./cadastro/TipoCadastro";
 import TipoExcluir from "./excluir/TipoExcluir";
 import ListagemAcomodacoes from "./listagem/ListagemAcomodacoes";
@@ -9,7 +12,7 @@ import TipoListagem from "./listagem/TipoListagem";
 export default class ControleHospedagem extends Navegar {
   constructor() {
     super();
-    this.menu = new MenuPrincipal();
+    this.menu = new MenuControleHospedagem();
   }
   navegar(): void {
     let loop = true;
@@ -22,19 +25,13 @@ export default class ControleHospedagem extends Navegar {
           loop = false;
           break;
         case 1:
-          new TipoCadastro().navegar();
+          Armazem.InstanciaUnica.Hospedagens.push(new CadastroHospedagem().cadastrar())
           break;
         case 2:
-          new TipoListagem().navegar();
+          console.log("2");
           break;
         case 3:
-          new TipoAtualizar().navegar();
-          break;
-        case 4:
-          new TipoExcluir().navegar();
-          break;
-        case 5:
-          new ListagemAcomodacoes().listar();
+          console.log("3");
           break;
         default:
           console.log("Opção não entendida :(");

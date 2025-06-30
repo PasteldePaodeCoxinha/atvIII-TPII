@@ -18,6 +18,4 @@ export default class Hospedagem{
     public get getAcomodacao(){return this.acomodacao}
     public get getCheckIn(){return this.checkIn}
     public get getCheckOut(){return this.checkOut}
-
-    public set setCheckOut(checkOut: Date){this.checkOut = checkOut}
 }

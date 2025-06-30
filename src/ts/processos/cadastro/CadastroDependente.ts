@@ -1,5 +1,4 @@
 import CadastroSuplementar from "../../abstracoes/cadastroSuplementar";
-import Armazem from "../../dominio/armazem";
 import MenuTipoDocumento from "../../menus/menuTipoDocumento";
 import Cliente from "../../modelos/cliente";
 import CadastroDocumento from "./CadastroDocumento";
