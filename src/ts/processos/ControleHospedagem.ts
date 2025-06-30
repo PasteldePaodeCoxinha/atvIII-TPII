@@ -8,6 +8,7 @@ import TipoCadastro from "./cadastro/TipoCadastro";
 import TipoExcluir from "./excluir/TipoExcluir";
 import ListagemAcomodacoes from "./listagem/ListagemAcomodacoes";
 import ListagemHospedagem from "./listagem/ListagemHospedagem";
+import ListarUmaHospedagem from "./listagem/ListarUmaHospedagem";
 import TipoListagem from "./listagem/TipoListagem";
 
 export default class ControleHospedagem extends Navegar {
@@ -32,7 +33,7 @@ export default class ControleHospedagem extends Navegar {
           new ListagemHospedagem().listar()
           break;
         case 3:
-          console.log("3");
+          new ListarUmaHospedagem().listar()
           break;
         default:
           console.log("Opção não entendida :(");
