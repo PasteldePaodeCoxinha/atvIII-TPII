@@ -21,6 +21,6 @@ export default class ListagemAcomodacoes extends Listagem {
             console.log(`-------------------------------------------------`)
         })
 
-        this.entrada.receberTexto("aaaaaaaaaaaaaaaaaaaaaaaaaaaa")
+        this.entrada.receberTexto("Aperte enter para sair:")
     }
 }
