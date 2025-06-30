@@ -5,6 +5,7 @@ import MenuPrincipal from "../menus/menuPricipal";
 import TipoAtualizar from "./atualizar/TipoAtualizar";
 import CadastroHospedagem from "./cadastro/CadastroHospedagem";
 import TipoCadastro from "./cadastro/TipoCadastro";
+import ExcluirHospedagem from "./excluir/ExcluirHospedagem";
 import TipoExcluir from "./excluir/TipoExcluir";
 import ListagemAcomodacoes from "./listagem/ListagemAcomodacoes";
 import ListagemHospedagem from "./listagem/ListagemHospedagem";
@@ -27,13 +28,18 @@ export default class ControleHospedagem extends Navegar {
           loop = false;
           break;
         case 1:
-          Armazem.InstanciaUnica.Hospedagens.push(new CadastroHospedagem().cadastrar())
+          Armazem.InstanciaUnica.Hospedagens.push(
+            new CadastroHospedagem().cadastrar()
+          );
           break;
         case 2:
-          new ListagemHospedagem().listar()
+          new ListagemHospedagem().listar();
           break;
         case 3:
-          new ListarUmaHospedagem().listar()
+          new ListarUmaHospedagem().listar();
+          break;
+        case 4:
+          new ExcluirHospedagem().excluir();
           break;
         default:
           console.log("Opção não entendida :(");
