@@ -2,6 +2,7 @@ import Navegar from "../abstracoes/navegar";
 import MenuPrincipal from "../menus/menuPricipal";
 import TipoAtualizar from "./atualizar/TipoAtualizar";
 import TipoCadastro from "./cadastro/TipoCadastro";
+import ControleHospedagem from "./ControleHospedagem";
 import TipoExcluir from "./excluir/TipoExcluir";
 import ListagemAcomodacoes from "./listagem/ListagemAcomodacoes";
 import TipoListagem from "./listagem/TipoListagem";
@@ -35,6 +36,9 @@ export default class Principal extends Navegar {
           break;
         case 5:
           new ListagemAcomodacoes().listar();
+          break;
+        case 6:
+          new ControleHospedagem().navegar();
           break;
         default:
           console.log("Opção não entendida :(");

@@ -10,7 +10,7 @@ export default class MenuControleHospedagem implements Menu {
         console.log(`| 0 - Voltar`)
         console.log(`| 1 - Cadastrar hospedagem`)
         console.log(`| 2 - Listar hospedagem`)
-        console.log(`| 2 - Pesquisar hospedagem de cliente`)
+        console.log(`| 3 - Pesquisar hospedagem de cliente`)
         console.log(`----------------------`)
     }
 }
